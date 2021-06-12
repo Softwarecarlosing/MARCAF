@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Marcaf</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/marcaf.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Marcaf</h4>
+              <span>Distribuidora de carnes selectas</span>
+              <span>- Sitio Oficial</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                
+                <li><a href="indextres.html">VACANTE</a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://www.facebook.com/MARCAF.CARNES.SELECTAS/"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p>Copyright 2019 Reflux Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Vacante de ayudante general</h2>
+            <div class="line-dec"></div>
+            <h4
+              >Se solicita personal para vacante de ayudante en general</h4
+            >
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="left-image">
+                  <img src="assets/images/ayudante.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="right-text">
+                  <h4>Documentos de contratación:</h4>
+                  <h5>*Solicitud elaborada a mano</h5>
+                  <h5>*Copia -Acta de Nacimiento personal</h5>
+                  <h5>*Copia de INE - actualizada</h5>
+                  <h5>*Comprobante de domicilio</h5>
+                  <h5>*Comprobante de afiliación al IMSS(En caso de estar registrado)</h5>
+                  <h5>*Notificar si tiene descuentos por casa en Infonavit o Fonacot</h5>
+                  <h5>*Constancia de buena salud, para cualquier duda o aclaración puede llamar al Tel: 7751195174</h5>
+                  <h4>Dirección de la distribuidora: Calle Jalisco, Javier Rojo Gómez, Tulancingo De Bravo</h4>
+                    
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Contacto:</h4>  
+                </div>
+              </div>
+                <h4> Ubicación</h4> 
+                <div class="right-image">
+                  <img src="assets/images/mapa.png" alt="600" />
+                </div>
+                 
+                <div>
+                <h4>Visita nuestro perfil de facebook</h4>
+                <li>
+                  <a href="https://www.facebook.com/MARCAF.CARNES.SELECTAS/"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <div>
+
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
